@@ -1,0 +1,58 @@
+taper $gedit .bashrc
+A la fin du fichier écrire:
+source /opt/ros/indigo/setup.bash
+export VREP_ROOT_DIR=~/PL_2018/V-Rep/
+source ~/PL_2018/ros_ws/devel/setup.bash
+
+Le fichier PL_2018 doit être dans Home
+
+Pour compiler
+$cd ~
+$cd PL_2018
+$cd ros_ws
+$catkin_make
+
+Si on veut recompiler tous les fichiers depuis le début:
+$catkin_make  --force
+
+Pour lancer la simulation
+$cd ~
+$cd PL_2018
+$./launch.sh
+
+Attention le premier lancement à l'ouverture de l'ordi est souvent pas bon
+
+Pour accéder à V-Rep
+$cd ~
+$cd PL_2018
+$cd V_Rep
+$./vrep.sh
+
+Le fichier de simulation est Simulation.ttt
+Les modèles de navettes sont dans V_Rep/model/montrac
+
+Pour voir le graphe des topics il faut lancer la simulation
+Puis dans un terminal à part il faut écrire:
+$rosrun rqt_graph rqt_graph
+
+Pour avoir la liste des topics
+$rostopic list
+
+Le fichier ProductConfiguartion.config comprend des informations utiles au lancement de la simulation
+(Un tutoriel est compris dans le fichier)
+
+Le fichier dans le lequel les élèves rentrent leur systèmes de commande (Petri etc) est le fichier
+mainCommande.cpp dans le fichier commande
+
+Attention au copier/coller de fichier il faut le modifier (ex:rajouter un espace dans le fichier) puis le sauvegarder 
+
+Le VrepTest3D.tar.gz c'est le projet "experimental" pour créer les objets 3D
+
+Si il y a des questions:
+porziemskyv@gmail.com (les codes c++ )
+b.bolzer@gmail.com (les codes c++ )
+clement.folny@gmail.com   (pour V-rep) 
+vinelju@gmail.com (ecriture des données dans log file et le checker
+
+
+
